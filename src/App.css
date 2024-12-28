@@ -140,3 +140,30 @@ h1{
 .check-icon:hover{
   color: rgb(4, 192, 104);
 }
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #2c2c2c;
+  color: white;
+}
+
+.search-bar input:focus {
+  outline: 2px solid rgb(0, 230, 122);
+}
+.primbtn{
+  background-color: rgb(0, 230, 122);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  cursor: pointer;
+}

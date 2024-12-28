@@ -4,10 +4,10 @@ const cors = require("cors");
 require("dotenv").config();
 const app = express();
 const PORT = process.env.PORT || 3001;
-
+// Cors Policy
 app.use(cors());
 app.use(express.json());
-app.use(express.static(__dirname+"/build"));
+app.use(express.static(__dirname + "/build"));
 mongoose
   .connect(process.env.Mongo_Url)
   .then(() => {
@@ -105,10 +105,9 @@ app.delete("/completedTodos/:id", async (req, res) => {
     res.status(400).json({ error: error.message });
   }
 });
-app.get("*",(req,res)=>
-{
-    res.sendFile(__dirname+"/build/index.html");
-})
+app.get("*", (req, res) => {
+  res.sendFile(__dirname + "/build/index.html");
+});
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
